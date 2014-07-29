@@ -132,7 +132,7 @@ public class gltest {
                 System.out.println(font.getGlyph(' ').getAdvance(fontSize, true));
                 System.out.println(font.getAdvanceWidth(Glyph.ID_SPACE, fontSize));
                 
-                
+                float A_Descent = font.getGlyph('A').getBBox().getHeight() * font.getGlyph('A').getScale(fontSize);
                 
                 // Render the text
                 //final float[] textPosition = new float[] {0,0,0};
@@ -141,7 +141,7 @@ public class gltest {
                 pmv.glMatrixMode(GLMatrixFunc.GL_MODELVIEW);
                 pmv.glPushMatrix();
                 // Place text in the center of the box
-                pmv.glTranslatef(X+(W/2) - (box.getWidth()/2), Y+(H/2)-(box.getHeight()/2), 0);
+                pmv.glTranslatef(X+(W/2) - (box.getWidth()/2), Y+(H/2)+(A_Descent/2), 0);
                 System.out.println(box);
 //                pmv.glTranslatef(0, Y+(H/2)-(box.getHeight()/2), 0);
                 pmv.glScalef(1, -1, 1);
