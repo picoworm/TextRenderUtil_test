@@ -64,7 +64,7 @@ public class gltest {
                 renderer.enable(gl2e, false);
 
     			try {
-					font = FontFactory.get(new File("D:/Skins/Fonts/times.ttf"));
+					font = FontFactory.get(new File("arial.ttf"));
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
