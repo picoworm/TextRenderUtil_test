@@ -92,7 +92,7 @@ public class gltest {
                 renderer.enable(gl2e, false);
 
     			try {
-					font = FontFactory.get(new File("d:/skins/Fonts/arialbd.ttf"));
+					font = FontFactory.get(new File("arialbd.ttf"));
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
